@@ -1,0 +1,29 @@
+{
+  "name": "community-voices-interface",
+  "version": "1.0.0",
+  "description": "Material design for Community Voices. This is in a separate repository during initial phases of development",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jeremyfifty9/community-voices-interface.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jeremyfifty9/community-voices-interface/issues"
+  },
+  "homepage": "https://github.com/jeremyfifty9/community-voices-interface#readme",
+  "devDependencies": {
+    "css-loader": "^0.28.4",
+    "sass-loader": "^6.0.6",
+    "style-loader": "^0.18.2",
+    "url-loader": "^0.5.9",
+    "webpacks": "0.0.2"
+  },
+  "dependencies": {
+    "material-components-web": "^0.17.0"
+  }
+}
