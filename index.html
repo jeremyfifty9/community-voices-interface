@@ -1,0 +1,139 @@
+<!doctype html>
+<html class="mdc-typography">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+
+        <title>CommunityVoices Wireframe</title>
+
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+    </head>
+    <body class="mdc-typography cv-app-body">
+        <header class="mdc-toolbar mdc-toolbar--fixed">
+            <div class="mdc-toolbar__row">
+                <section class="mdc-toolbar__section mdc-toolbar__section--align-start">
+                    <h1 class="mdc-toolbar__title">Community Voices</h1>
+                </section>
+            </div>
+
+            <div class="mdc-toolbar__row cv-theme--white">
+                <section class="mdc-toolbar__section mdc-toolbar__section--align-start">
+                    <span class="mdc-toolbar__title">
+                        <button class="mdc-button mdc-button--raised mdc-ripple-surface cv-button--primary">
+                            Add
+                        </button>
+                    </span>
+                </section>
+            </div>
+        </header>
+
+        <div class="cv-app-wrap mdc-toolbar-fixed-adjust mdc-theme--background">
+            <nav class="mdc-permanent-drawer">
+                <div class="mdc-list-group">
+                    <nav class="mdc-list">
+                        <a class="mdc-list-item mdc-permanent-drawer--selected" href="#">
+                            <i class="material-icons mdc-list-item__start-detail" aria-hidden="true">collections</i>Slides
+                        </a>
+                        <a class="mdc-list-item" href="#">
+                            <i class="material-icons mdc-list-item__start-detail" aria-hidden="true">image</i>Images
+                        </a>
+                        <a class="mdc-list-item" href="#">
+                            <i class="material-icons mdc-list-item__start-detail" aria-hidden="true">format_quote</i>Quotes
+                        </a>
+                    </nav>
+                </div>
+            </nav>
+            <main>
+                <div class="mdc-grid-list">
+                    <ul class="mdc-grid-list__tiles">
+                        <li class="mdc-grid-tile">
+                            <div class="mdc-grid-tile__primary">
+                                <img class="mdc-grid-tile__primary-content" src="https://unsplash.it/200/300">
+                            </div>
+                        </li>
+                        <li class="mdc-grid-tile">
+                            <div class="mdc-grid-tile__primary">
+                                <img class="mdc-grid-tile__primary-content" src="https://unsplash.it/400/600">
+                            </div>
+                        </li>
+                        <li class="mdc-grid-tile">
+                            <div class="mdc-grid-tile__primary">
+                                <img class="mdc-grid-tile__primary-content" src="https://unsplash.it/400/640">
+                            </div>
+                        </li>
+                        <li class="mdc-grid-tile">
+                            <div class="mdc-grid-tile__primary">
+                                <img class="mdc-grid-tile__primary-content" src="https://unsplash.it/500/600">
+                            </div>
+                        </li>
+                        <li class="mdc-grid-tile">
+                            <div class="mdc-grid-tile__primary">
+                                <img class="mdc-grid-tile__primary-content" src="https://unsplash.it/400/700">
+                            </div>
+                        </li>
+                        <li class="mdc-grid-tile">
+                            <div class="mdc-grid-tile__primary">
+                                <img class="mdc-grid-tile__primary-content" src="https://unsplash.it/450/600">
+                            </div>
+                        </li>
+                        <li class="mdc-grid-tile">
+                            <div class="mdc-grid-tile__primary">
+                                <img class="mdc-grid-tile__primary-content" src="https://unsplash.it/400/620">
+                            </div>
+                        </li>
+                        <li class="mdc-grid-tile">
+                            <div class="mdc-grid-tile__primary">
+                                <img class="mdc-grid-tile__primary-content" src="https://unsplash.it/200/330">
+                            </div>
+                        </li>
+                        <li class="mdc-grid-tile">
+                            <div class="mdc-grid-tile__primary">
+                                <img class="mdc-grid-tile__primary-content" src="https://unsplash.it/400/800">
+                            </div>
+                        </li>
+                        <li class="mdc-grid-tile">
+                            <div class="mdc-grid-tile__primary">
+                                <img class="mdc-grid-tile__primary-content" src="https://unsplash.it/400/610">
+                            </div>
+                        </li>
+                        <li class="mdc-grid-tile">
+                            <div class="mdc-grid-tile__primary">
+                                <img class="mdc-grid-tile__primary-content" src="https://unsplash.it/500/630">
+                            </div>
+                        </li>
+                        <li class="mdc-grid-tile">
+                            <div class="mdc-grid-tile__primary">
+                                <img class="mdc-grid-tile__primary-content" src="https://unsplash.it/480/700">
+                            </div>
+                        </li>
+                        <li class="mdc-grid-tile">
+                            <div class="mdc-grid-tile__primary">
+                                <img class="mdc-grid-tile__primary-content" src="https://unsplash.it/430/600">
+                            </div>
+                        </li>
+                        <li class="mdc-grid-tile">
+                            <div class="mdc-grid-tile__primary">
+                                <img class="mdc-grid-tile__primary-content" src="https://unsplash.it/420/620">
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </main>
+        </div>
+
+        <script type="text/javascript" src="./build/material-components-web.js"></script>
+        <script type="text/javascript" src="./build/chunk.js"></script>
+
+        <script>
+        (function(){
+            var toolbar = mdc.toolbar.MDCToolbar.attachTo(document.querySelector('.mdc-toolbar'));
+            toolbar.fixedAdjustElement = document.querySelector('.mdc-toolbar-fixed-adjust');
+
+            [].forEach.call(document.querySelectorAll('.mdc-ripple-surface'), function(surface) {
+                mdc.ripple.MDCRipple.attachTo(surface);
+            });
+        })();
+        </script>
+    </body>
+</html>

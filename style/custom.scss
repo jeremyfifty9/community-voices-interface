@@ -1,0 +1,33 @@
+html {
+    height: 100%;
+}
+
+.cv-theme--white {
+    background: #fff;
+}
+
+.cv-app-body {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    min-height: 100%;
+}
+
+.cv-button--primary {
+    background: $mdc-theme-primary;
+}
+
+.cv-app-wrap {
+    display: flex;
+    flex: 1 1 auto;
+    height: 100%;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+h1.mdc-toolbar__title {
+    background: no-repeat 0/32px url(../image/logo-white.png);
+    padding-left: 50px;
+}
