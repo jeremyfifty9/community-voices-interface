@@ -2,12 +2,14 @@
 
 const path = require("path");
 
+const BUILD_PATH = path.join(__dirname, "public/build");
+
 module.exports = [{
 
     entry: "./js/wireframe",
     output: {
         filename: "chunk.js",
-        path: path.join(__dirname, "build")
+        path: BUILD_PATH
     },
 
     module: {
@@ -32,7 +34,7 @@ module.exports = [{
     name: "js-all",
     entry: path.join(__dirname, "node_modules/material-components-web"),
     output: {
-        path: path.join(__dirname, "build"),
+        path: BUILD_PATH,
         filename: "material-components-web.js",
         libraryTarget: "umd",
         library: "mdc",
