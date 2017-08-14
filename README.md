@@ -19,6 +19,6 @@ To install, change to the repository's root directory and run the build script:
 This pre-processes anything configured with webpack. This script needs to be executed whenever anything processed by webpack is changed.
 
 ## Development
-Speed up development by having npm watch your files. When you start developing, instead of `npm run build`, add a watch flag. Whenever anything webpack is watching changes, npm will automatically run the build script:
+Speed up development by having npm watch your files. When you start developing, instead of `npm run build`, add a watch flag. Whenever anything webpack must pre-process changes, npm will be notified and automatically run the build script. For example:
 
     npm run build -- --watch
