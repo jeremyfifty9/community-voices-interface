@@ -1,11 +1,18 @@
 // webpack.config.js
 
 const path = require("path");
-
 const BUILD_PATH = path.join(__dirname, "public/build");
+// Will need to use ExtractTextPlugin in production to seperate stylesheets
+// to prevent flashes of unstyled content
+// See https://stackoverflow.com/questions/36453826/how-to-stop-fouc-when-using-css-loaded-by-webpack
+// and https://stackoverflow.com/questions/42793077/struggling-to-remove-fouc-flash-of-unstyled-content-when-using-webpack
+// and https://survivejs.com/webpack/styling/separating-css/
+// const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = [{
-
+    // devServer: {
+    //     contentBase: path.resolve(__dirname, './public')
+    // },
     entry: "./js/wireframe",
     output: {
         filename: "chunk.js",
@@ -25,10 +32,17 @@ module.exports = [{
                     includePaths: [path.join(__dirname, "node_modules")]
                 }
             }]
+            // use: ExtractTextPlugin.extract({
+            //     fallback: 'style-loader',
+            //     use: ['css-loader', 'sass-loader']
+            // })
         }, {
             test: /\.(png|jpg)$/,
             loader: "url-loader"
-        }]
+        }] //,
+        // plugins: [
+        //     new ExtractTextPlugin('style.css')
+        // ]
     }
 }, {
     name: "js-all",
